@@ -29,18 +29,14 @@ class Database
     {
         // $result = mysqli_query($this->connection, $sql);
         $result = $this->connection->query($sql);
-
         $this->confirm_query($result);
         return $result;
     }
 
     private function confirm_query($result)
     {
-        // if ($result) {
-        //     die('Query Failed');
-        // }
 
-        if ($result) {
+        if (!$result) {
             # code...
             die('Query failed' . $this->connection->error);
         }

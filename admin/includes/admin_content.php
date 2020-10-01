@@ -8,10 +8,16 @@
                 <small>Subheading</small>
             </h1>
             <?php
-            $sql = "SELECT * FROM users WHERE id=1";
-            $result = $database->query($sql);
-            $user_found = mysqli_fetch_array($result);
-            // var_dump($user_found);
+            $found_user = User::find_user_by_id(1);
+
+            $user = User::instantiation($found_user);
+
+
+            // echo $user->username . '<br/>';
+            // echo $user->first_name . '<br/>';
+            // echo $user->last_name . '<br/>';
+            // echo $user->password . '<br/>';
+
             ?>
             <ol class="breadcrumb">
                 <li>

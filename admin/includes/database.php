@@ -3,7 +3,7 @@ require_once('new_config.php');
 
 class Database
 {
-
+ 
     public $connection;
 
     function __construct()

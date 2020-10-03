@@ -11,8 +11,8 @@
             $found_user = User::find_user_by_id(1);
 
             $user = User::instantiation($found_user);
-
-
+ 
+            $user = new Storie();
             // echo $user->username . '<br/>';
             // echo $user->first_name . '<br/>';
             // echo $user->last_name . '<br/>';
